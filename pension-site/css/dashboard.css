@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f6f8;
+  }
+  header {
+    background: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  .logo img {
+    height: 30px;
+    margin-right: 10px;
+  }
+  .secure {
+    color: green;
+  }
+  .container {
+    padding: 2rem;
+  }
+  .card, .quick-actions, .document-checklist {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+  .card h3 {
+    margin: 0 0 1rem 0;
+  }
+  .button-primary, a {
+    background-color: #1662f6;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .quick-actions div {
+    padding: 0.5rem;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+  }
+  .quick-actions div:last-child {
+    border-bottom: none;
+  }
+  .document-checklist label {
+    display: block;
+    margin: 0.5rem 0;
+  }
+  footer {
+    background-color: #0c1a2b;
+    color: white;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  footer div {
+    flex: 1;
+    margin: 0.5rem;
+  }
+  footer h4 {
+    margin-bottom: 0.5rem;
+  }

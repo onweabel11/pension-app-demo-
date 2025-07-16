@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pension Application</title>
+  <link rel="stylesheet" href="../css/appform.css">
+ 
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="https://img.icons8.com/ios-filled/50/000000/document.png"/>
+      <div>
+        <div>PENCOM Portal</div>
+        <small>Nigerian Pension Commission</small>
+      </div>
+    </div>   
+    <div class="secure-label">🔒 Secure Portal</div>
+  </header>
+
+  <div class="container">
+
+    <!-- Step 1 -->
+    <div class="step" id="step1">
+      <h2>Step 1: Identity Verification</h2>
+      <label for="idNumber">Enter NIN/BVN:</label>
+      <input type="text" id="idNumber" placeholder="11-digit NIN/BVN" />
+      <button onclick="goToStep2()">Save & Next</button>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="step hidden" id="step2">
+      <h2>Step 2: Pension Details</h2>
+      <label for="pensionNumber">Pension Number:</label>
+      <input type="text" id="pensionNumber" />
+      <label for="pfa">Select PFA:</label>
+      <select id="pfa">
+        <option value="">--Choose--</option>
+        <option value="ARM">ARM Pension</option>
+        <option value="Stanbic">Stanbic IBTC</option>
+        <option value="Leadway">Leadway</option>
+        <option value="NLPC">NLPC Pension</option>
+      </select>
+      <button onclick="goToStep3()">Save & Next</button>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="step hidden" id="step3">
+      <h2>Step 3: Upload Documents</h2>
+      <label>Birth Certificate:</label><input type="file" id="birthCert" required />
+      <label>Employment Letter:</label><input type="file" id="employmentLetter" required>
+      <label>Bank Statement:</label><input type="file" id="bankStatement" />
+      <label>Passport Photo:</label><input type="file" id="passportPhoto" />
+      <button onclick="goToReview()">Review & Submit</button>
+    </div>
+
+    <!-- Step 4 -->
+    <div class="step hidden" id="step4">
+      <h2>Step 4: Review & Submit</h2>
+      <p><strong>NIN/BVN:</strong> <span id="reviewId"></span></p>
+      <p><strong>Pension Number:</strong> <span id="reviewPension"></span></p>
+      <p><strong>PFA:</strong> <span id="reviewPFA"></span></p>
+      <p><strong>Uploaded Documents:</strong></p>
+      <ul>
+        <li>Birth Certificate: <span id="reviewBirthCert">No</span></li>
+        <li>Employment Letter: <span id="reviewEmpLetter">No</span></li>
+        <li>Bank Statement: <span id="reviewBank">No</span></li>
+        <li>Passport Photo: <span id="reviewPassport">No</span></li>
+      </ul>
+      <button onclick="submitApp()">Submit Application</button>
+    </div>
+
+  </div>
+
+  <script src="../script/script.js">
+   
+  </script>
+
+
+</body>
+</html>
